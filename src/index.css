@@ -1,0 +1,137 @@
+/* ============================================================
+   Снэпбилд — дизайн-система (Tailwind CSS v4)
+   Токены собраны с https://snapbuild.ru/
+   ============================================================ */
+
+/* Подключаем tailwind.config.js (в т.ч. для удобства/совместимости) */
+@config "../tailwind.config.js";
+
+@import "tailwindcss";
+
+/* ============================================================
+   Нативные токены v4 (@theme) — рекомендуемый способ для v4.
+   Используются классы: bg-brand-500, text-neutral-500,
+   rounded-card, shadow-glass, font-primary и т.д.
+   ============================================================ */
+@theme {
+  /* --- Шрифты --- */
+  --font-sans: "TT Commons Pro", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-primary: "TT Commons Pro", ui-sans-serif, system-ui, sans-serif;
+  --font-secondary: "TT Commons Pro", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* --- Брейкпоинты --- */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1440px;
+  --breakpoint-2xl: 2560px;
+
+  /* --- Радиусы скруглений --- */
+  --radius-sm: 0.25rem;      /* 4px  */
+  --radius-md: 0.5rem;       /* 8px  — кнопки/инпуты/чипы */
+  --radius-lg: 0.75rem;      /* 12px — карточки по умолчанию */
+  --radius-xl: 1rem;         /* 16px */
+  --radius-2xl: 1.5rem;      /* 24px — большие карточки/превью */
+  --radius-3xl: 2rem;        /* 32px — CTA-блок */
+  --radius-card: 1.25rem;    /* 20px — карточки dds */
+  --radius-full: 9999px;     /* пилюли */
+
+  /* --- Тени --- */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.10), 0 2px 4px -2px rgba(0, 0, 0, 0.10);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.10), 0 4px 6px -4px rgba(0, 0, 0, 0.10);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.10), 0 8px 10px -6px rgba(0, 0, 0, 0.10);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-glass: 0 4px 16px rgba(0, 0, 0, 0.04);
+  --shadow-card: 0 8px 32px -4px rgba(0, 0, 0, 0.15);
+  --shadow-menu: 0 16px 40px rgba(0, 0, 0, 0.12);
+
+  /* --- Цвета бренда (primary / brand) --- */
+  --color-brand-50: #eff3ff;
+  --color-brand-100: #dae2ff;
+  --color-brand-200: #becdff;
+  --color-brand-300: #91aeff;
+  --color-brand-400: #5e84fc;
+  --color-brand-500: #3758f9;
+  --color-brand-600: #2237ee;
+  --color-brand-700: #1a25db;
+  --color-brand-800: #1c20b1;
+  --color-brand-900: #1c228c;
+  --color-brand-950: #161755;
+
+  --color-primary-50: #eff3ff;
+  --color-primary-100: #dae2ff;
+  --color-primary-200: #becdff;
+  --color-primary-300: #91aeff;
+  --color-primary-400: #5e84fc;
+  --color-primary-500: #3758f9;
+  --color-primary-600: #2237ee;
+  --color-primary-700: #1a25db;
+  --color-primary-800: #1c20b1;
+  --color-primary-900: #1c228c;
+  --color-primary-950: #161755;
+
+  /* --- Нейтральные --- */
+  --color-neutral-50: #ffffff;
+  --color-neutral-100: #f2f2f4;
+  --color-neutral-200: #ececee;
+  --color-neutral-300: #dcdde0;
+  --color-neutral-400: #adafb4;
+  --color-neutral-500: #5a5b62;
+  --color-neutral-600: #71747d;
+  --color-neutral-700: #4e515a;
+  --color-neutral-800: #2c2d34;
+  --color-neutral-900: #1c1c1f;
+  --color-neutral-950: #141414;
+
+  /* --- Поверхности / тексты / акценты --- */
+  --color-background: #f2f2f4;
+  --color-foreground-primary: #ffffff;
+  --color-foreground-secondary: #fafafa;
+  --color-foreground-tertiary: #f5f5f7;
+  --color-text-primary: #000000;
+  --color-text-secondary: #5a5b62;
+  --color-text-tertiary: rgba(0, 0, 0, 0.60);
+
+  --color-accent-orange: #ff6d3d;
+  --color-accent-pink: #ff6ba7;
+  --color-accent-purple: #bb6dff;
+  --color-accent-peach: #ffcdb3;
+  --color-accent-rose: #ffa4b6;
+  --color-accent-blush: #ffb2e9;
+  --color-accent-lavender: #d4d6ff;
+
+  --color-divider: rgba(0, 0, 0, 0.08);
+
+  /* --- Контейнер / ширина --- */
+  --container-content: 48rem;
+  --container-hero: 64rem;
+  --container-screen-xl: 1440px;
+
+  /* --- Отступы секций (вертикальные) --- */
+  --section-padding-block: 6rem;   /* 96px — крупные секции (steps/tabs) */
+  --section-padding-block-sm: 4rem; /* 64px — стандартная */
+  --section-gap: 2.5rem;           /* 40px — между блоками секции */
+
+  /* --- Минимальные высоты --- */
+  --min-height-banner: 650px;
+}
+
+/* ============================================================
+   Базовые стили дизайн-системы
+   ============================================================ */
+@layer base {
+  body {
+    @apply bg-background font-sans text-neutral-500 antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-neutral-800;
+  }
+}
