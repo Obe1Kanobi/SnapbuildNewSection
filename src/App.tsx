@@ -1,15 +1,18 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from './assets/vite.svg'
-// import heroImg from './assets/hero.png'
-import './App.css'
+import { Header } from './components/sections/Header'
+import { Hero } from './components/sections/Hero'
+import { Footer } from './components/sections/Footer'
 
 function App() {
-  //const [count, setCount] = useState(0)
-
   return (
     <>
-      
+      <Header />
+      <main>
+        <Hero />
+        {/* Здесь будут остальные секции сайта Снэпбилд
+            (логотипы, продуктовые карточки, вкладки, сравнение,
+            безопасность, роадмап, FAQ, CTA) + 5 новых секций */}
+      </main>
+      <Footer />
     </>
   )
 }
