@@ -6,7 +6,7 @@ import { Button } from '../ui/Button'
  * pill-бейдж, крупный заголовок (76px), подзаголовок,
  * CTA-кнопки и большое превью-изображение с радиусом 24px сверху.
  */
-export function Hero() {
+export function HeroBlock() {
   return (
     <section
       id="hero"

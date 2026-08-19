@@ -31,7 +31,7 @@ const PRODUCT_CARDS = [
  * Секция "Продукт": лента логотипов партнёров + три продуктовые карточки.
  * Фон секции #f2f2f4, карточки белые с радиусом 24px.
  */
-export function Product() {
+export function ProductBlock() {
   return (
     <section id="product" className="bg-[#f2f2f4] py-6">
         <LogoBlock />

@@ -33,7 +33,7 @@ const LINK_COLUMNS: Array<{ title: string; links: Array<{ label: string; href: s
  * Футер (.dds-footer): фон #f2f2f4, чёрный текст, верх — бренд +
  * колонки ссылок, низ — legal (копирайт + email) с верхней границей.
  */
-export function Footer() {
+export function FooterBlock() {
   return (
     <footer className="flex flex-col gap-10 bg-[#f2f2f4] px-4 py-6 text-black md:gap-10 md:px-10 md:py-8">
       <div className="mx-auto flex w-full max-w-[1440px] flex-col gap-8 md:flex-row md:items-start md:justify-between md:gap-12">

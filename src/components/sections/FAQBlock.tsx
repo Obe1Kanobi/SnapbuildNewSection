@@ -48,7 +48,7 @@ const FAQ_ITEMS = [
  * Секция "FAQ" (.dds-accordion): аккордеон с вопросами и ответами.
  * На тёмном фоне (#0d0d0d карточки), активный вопрос раскрывается.
  */
-export function FAQ() {
+export function FAQBlock() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (

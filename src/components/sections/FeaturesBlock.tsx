@@ -136,7 +136,7 @@ const TABS: Tab[] = [
  * пилюли-табы (активная — чёрная) + панель с изображением слева
  * и карточками функций справа. Фон секции #f2f2f4.
  */
-export function Features() {
+export function FeaturesBlock() {
   const [activeId, setActiveId] = useState<string>(TABS[0].id)
   const activeTab = TABS.find((t) => t.id === activeId) ?? TABS[0]
 

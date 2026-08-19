@@ -16,7 +16,7 @@ const NAV_LINKS = [
  * логотип 153px слева, навигация по центру, кнопки справа.
  * До 1023px — бургер-меню.
  */
-export function Header() {
+export function HeaderBlock() {
   const [open, setOpen] = useState(false)
 
   return (

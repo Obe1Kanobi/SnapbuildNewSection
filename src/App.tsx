@@ -1,25 +1,41 @@
-import { Header } from './components/sections/Header'
-import { Hero } from './components/sections/Hero'
-import { Product } from './components/sections/Product'
-import { Features } from './components/sections/Features'
-import { Security } from './components/sections/Security'
-import { FAQ } from './components/sections/FAQ'
-import { Footer } from './components/sections/Footer'
+import { HeaderBlock } from './components/sections/HeaderBlock'
+import { HeroBlock } from './components/sections/HeroBlock'
+import { ProductBlock } from './components/sections/ProductBlock'
+import { FeaturesBlock } from './components/sections/FeaturesBlock'
+import { SecurityBlock } from './components/sections/SecurityBlock'
+import { FAQBlock } from './components/sections/FAQBlock'
+import { FooterBlock } from './components/sections/FooterBlock'
+import PricingPlansBlock from './components/sections/PricingPlans'
+import FeedbackFormBlock from './components/sections/FeedbackFormBlock'
+import ReviewsBlock from './components/sections/ReviewsBlock'
+import MetricsBlock from './components/sections/MetricsBlock'
+import UseCasesBlock from './components/sections/UseCasesBlock'
 
 function App() {
   return (
     <>
-      <Header />
+      <HeaderBlock />
       <main>
-        <Hero />
-        <Product />
-        <Features />
-        <Security />
-        <FAQ />
+        <HeroBlock />
+        <ProductBlock />
+
+        <FeaturesBlock />
+        <UseCasesBlock  />
+
+        
+        <SecurityBlock />
+        <ReviewsBlock />
+
+        <MetricsBlock />
+        <FeedbackFormBlock />
+        
+        <PricingPlansBlock />
+        <FAQBlock />
+        
         {/* Здесь будут следующие секции:
             таблица сравнения, роадмап, CTA + 5 новых секций */}
       </main>
-      <Footer />
+      <FooterBlock />
     </>
   )
 }
