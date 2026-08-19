@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { cn } from '../../lib/cn'
+import { Button } from '../ui/Button'
 
 const FAQ_ITEMS = [
   {
@@ -53,8 +54,6 @@ export function FAQBlock() {
 
   return (
     <section id="faq" className="bg-black py-24">
-      <h1>FAQBlock</h1>
-      <hr/>
       <div className="mx-auto w-full max-w-[1440px] px-4 md:px-10">
         <div className="mb-14 flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
           <h2 className="max-w-xl text-4xl font-medium leading-tight tracking-tight text-white md:text-5xl">
@@ -73,11 +72,12 @@ export function FAQBlock() {
                 key={item.question}
                 className="self-start rounded-2xl bg-[#0d0d0d] p-5"
               >
-                <button
+                <Button
                   type="button"
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                   aria-expanded={isOpen}
-                  className="flex w-full items-start justify-between gap-5 text-left"
+                  variant="glass"
+                  className="flex w-full items-start justify-between gap-5 p-0 text-left bg-transparent text-white hover:bg-transparent"
                 >
                   <span className="text-base font-medium leading-relaxed text-white">
                     {item.question}
@@ -103,7 +103,7 @@ export function FAQBlock() {
                       />
                     </svg>
                   </span>
-                </button>
+                </Button>
 
                 <div
                   className={cn(

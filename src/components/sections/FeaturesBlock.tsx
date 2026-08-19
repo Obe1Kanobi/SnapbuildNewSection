@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { cn } from '../../lib/cn'
+import { Button } from '../ui/Button'
 import useCasesSites from '../../assets/use-cases-sites.webp'
 import useCasesImages from '../../assets/use-cases-images.webp'
 import useCasesVideo from '../../assets/use-cases-video.webp'
@@ -142,8 +143,6 @@ export function FeaturesBlock() {
 
   return (
     <section id="features" className="bg-[#f2f2f4] py-24">
-      <h1>FeaturesBlock</h1>
-      <hr/>
       <div className="mx-auto w-full max-w-[1440px] px-4 md:px-10">
         {/* Заголовок + табы */}
         <div className="mb-12 flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
@@ -153,19 +152,18 @@ export function FeaturesBlock() {
 
           <div className="flex flex-wrap gap-2">
             {TABS.map((tab) => (
-              <button
+              <Button
                 key={tab.id}
                 type="button"
                 onClick={() => setActiveId(tab.id)}
+                variant={activeId === tab.id ? 'dark' : 'light'}
                 className={cn(
-                  'inline-flex items-center justify-center rounded-full px-4 py-2 text-base font-medium transition-colors',
-                  activeId === tab.id
-                    ? 'bg-black text-white'
-                    : 'bg-[#f5f5f7] text-black hover:bg-neutral-200',
+                  'rounded-full px-4 py-2 text-base font-medium',
+                  activeId === tab.id ? 'bg-black text-white' : 'bg-[#f5f5f7] text-black hover:bg-neutral-200',
                 )}
               >
                 {tab.label}
-              </button>
+              </Button>
             ))}
           </div>
         </div>

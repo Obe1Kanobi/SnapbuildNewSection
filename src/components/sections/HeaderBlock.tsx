@@ -3,26 +3,27 @@ import logo from '../../assets/snapbuild-logo.svg'
 import { Button } from '../ui/Button'
 
 const NAV_LINKS = [
+  { href: '#product', label: 'Продукт' },
   { href: '#features', label: 'Возможности' },
-  { href: '#compare', label: 'Сравнение' },
+  { href: '#use-cases', label: 'Кейсы' },
+  { href: '#metrics', label: 'Метрики' },
   { href: '#pricing', label: 'Тарифы' },
   { href: '#reviews', label: 'Отзывы' },
+  { href: '#feedback', label: 'Контакты' },
   { href: '#faq', label: 'FAQ' },
 ]
 
 /**
  * Шапка по токенам Снэпбилд (.dds-header):
- * absolute, top-0, z-50, прозрачный фон; grid 1fr auto 1fr,
- * логотип 153px слева, навигация по центру, кнопки справа.
+ * sticky — прилипает к верху при скролле, полупрозрачный белый фон
+ * с blur, логотип 153px слева, навигация по центру, кнопки справа.
  * До 1023px — бургер-меню.
  */
 export function HeaderBlock() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50 bg-transparent text-neutral-900">
-      <h1>HeaderBlock</h1>
-      <hr/>
+    <header className="sticky top-0 z-50 border-b border-black/5 bg-white/85 text-neutral-900 backdrop-blur-md">
       <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-4 py-4 md:px-10">
         {/* Логотип */}
         <a href="#" className="inline-flex shrink-0">
@@ -62,12 +63,13 @@ export function HeaderBlock() {
         </div>
 
         {/* Бургер (mobile) */}
-        <button
+        <Button
           type="button"
           aria-label="Открыть меню"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
+          variant="glass"
+          className="flex h-10 w-10 flex-col gap-1.5 p-0 lg:hidden"
         >
           <span
             className={`block h-0.5 w-6 bg-neutral-900 transition-transform ${
@@ -84,7 +86,7 @@ export function HeaderBlock() {
               open ? '-translate-y-1.5 -rotate-45' : ''
             }`}
           />
-        </button>
+        </Button>
       </div>
 
       {/* Мобильное меню */}

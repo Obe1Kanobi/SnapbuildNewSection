@@ -1,28 +1,35 @@
-const stats = [
-  { id: 1, name: 'Transactions every 24 hours', value: '44 million' },
-  { id: 2, name: 'Assets under holding', value: '$119 trillion' },
-  { id: 3, name: 'New users annually', value: '46,000' },
+const METRICS = [
+  { value: '5 минут', label: 'до готового сайта вместо 3–5 недель' },
+  { value: '100%', label: 'точность соблюдения дизайн-системы' },
+  { value: '5 форматов', label: 'сайты, изображения, видео, баннеры, презентации' },
+  { value: '1 запрос', label: 'от идеи до полного набора материалов бренда' },
 ]
+
 /**
- * Metrics-секция (секция метрик):
+ * Metrics-секция (метрики):
  * «5 минут вместо 3 недель», количество генераций и т.п.
- * Компактная секция после hero или сравнения.
+ * Компактная секция после hero. Светлый фон, фирменные акценты.
  */
 export default function MetricsBlock() {
   return (
-    <div className="bg-gray-900 py-24 sm:py-32">
-      <h1>MetricsBlock</h1>
-      <hr/>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
-          {stats.map((stat) => (
-            <div key={stat.id} className="mx-auto flex max-w-xs flex-col gap-y-4">
-              <dt className="text-base/7 text-gray-400">{stat.name}</dt>
-              <dd className="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">{stat.value}</dd>
+    <section id="metrics" className="bg-white py-16 sm:py-20">
+      <div className="mx-auto w-full max-w-[1440px] px-4 md:px-10">
+        <dl className="grid grid-cols-1 gap-x-8 gap-y-12 text-center sm:grid-cols-2 lg:grid-cols-4">
+          {METRICS.map((metric) => (
+            <div
+              key={metric.label}
+              className="mx-auto flex max-w-xs flex-col items-center gap-2"
+            >
+              <dd className="order-first text-4xl font-bold tracking-tight text-black sm:text-5xl">
+                {metric.value}
+              </dd>
+              <dt className="text-base leading-relaxed text-[#5a5b62]">
+                {metric.label}
+              </dt>
             </div>
           ))}
         </dl>
       </div>
-    </div>
+    </section>
   )
 }

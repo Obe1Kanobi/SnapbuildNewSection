@@ -36,8 +36,6 @@ const LINK_COLUMNS: Array<{ title: string; links: Array<{ label: string; href: s
 export function FooterBlock() {
   return (
     <footer className="flex flex-col gap-10 bg-[#f2f2f4] px-4 py-6 text-black md:gap-10 md:px-10 md:py-8">
-      <h1>FooterBlock</h1>
-      <hr/>
       <div className="mx-auto flex w-full max-w-[1440px] flex-col gap-8 md:flex-row md:items-start md:justify-between md:gap-12">
         {/* Бренд-блок */}
         <div className="flex flex-col gap-4 md:flex-initial">

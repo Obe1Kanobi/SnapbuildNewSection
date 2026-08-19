@@ -1,110 +1,76 @@
-const posts = [
+const USE_CASES = [
   {
-    id: 1,
-    title: 'Boost your conversion rate',
-    href: '#',
+    category: 'Маркетинг',
+    title: 'Кампания под площадку за один день',
     description:
-      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-    date: 'Mar 16, 2020',
-    datetime: '2020-03-16',
-    category: { title: 'Marketing', href: '#' },
-    author: {
-      name: 'Michael Foster',
-      role: 'Co-Founder / CTO',
-      href: '#',
-      imageUrl:
-        'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    },
+      'Баннеры и креативы в фирменном стиле разворачиваются под все плейсменты автоматически — без ручной пересборки.',
+    result: '+40%',
+    resultLabel: 'скорость запуска кампаний',
   },
   {
-    id: 2,
-    title: 'How to use search engine optimization to drive sales',
-    href: '#',
-    description: 'Optio cum necessitatibus dolor voluptatum provident commodi et. Qui aperiam fugiat nemo cumque.',
-    date: 'Mar 10, 2020',
-    datetime: '2020-03-10',
-    category: { title: 'Sales', href: '#' },
-    author: {
-      name: 'Lindsay Walton',
-      role: 'Front-end Developer',
-      href: '#',
-      imageUrl:
-        'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    },
+    category: 'Продажи',
+    title: 'Питч-деки и презентации в бренде',
+    description:
+      'Презентация собирается из запроса за минуты: структура, черновик слайдов и фирменная типографика применяются автоматически.',
+    result: '2x',
+    resultLabel: 'быстрее подготовка к переговорам',
   },
   {
-    id: 3,
-    title: 'Improve your customer experience',
-    href: '#',
+    category: 'Дизайн',
+    title: 'Единая дизайн-система для всей команды',
     description:
-      'Cupiditate maiores ullam eveniet adipisci in doloribus nulla minus. Voluptas iusto libero adipisci rem et corporis. Nostrud sint anim sunt aliqua. Nulla eu labore irure incididunt velit cillum quis magna dolore.',
-    date: 'Feb 12, 2020',
-    datetime: '2020-02-12',
-    category: { title: 'Business', href: '#' },
-    author: {
-      name: 'Tom Cook',
-      role: 'Director of Product',
-      href: '#',
-      imageUrl:
-        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    },
+      'Компоненты, цвета и шрифты — единственный источник стиля. Каждый участник создаёт материалы строго по правилам бренда.',
+    result: '100%',
+    resultLabel: 'соответствие брендбуку',
   },
 ]
 
 /**
  * UseCases-секция (Кейсы использования):
- * сценарии для маркетинга/продаж/дизайна
- * можно с цифрами результата. После вкладок «Возможности»
+ * сценарии для маркетинга, продаж и дизайна с цифрами результата.
+ * После вкладок «Возможности». Светлый фон #f2f2f4, белые карточки.
  */
 export default function UseCasesBlock() {
   return (
-    <div className="bg-gray-900 py-24 sm:py-32">
-      <h1>UseCasesBlock</h1>
-      <hr/>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl">From the blog</h2>
-          <p className="mt-2 text-lg/8 text-gray-300">Learn how to grow your business with our expert advice.</p>
+    <section id="use-cases" className="bg-[#f2f2f4] py-24">
+      <div className="mx-auto w-full max-w-[1440px] px-4 md:px-10">
+        <div className="mb-12 max-w-2xl">
+          <span className="text-sm font-medium text-brand-500">Кейсы</span>
+          <h2 className="mt-3 text-4xl font-semibold leading-tight tracking-tight text-black md:text-5xl">
+            Кейсы использования
+          </h2>
+          <p className="mt-4 text-lg leading-relaxed text-[#5a5b62]">
+            Сценарии для маркетинга, продаж и дизайна — с измеримым результатом.
+          </p>
         </div>
-        <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-700 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-          {posts.map((post) => (
-            <article key={post.id} className="flex max-w-xl flex-col items-start justify-between">
-              <div className="flex items-center gap-x-4 text-xs">
-                <time dateTime={post.datetime} className="text-gray-400">
-                  {post.date}
-                </time>
-                <a
-                  href={post.category.href}
-                  className="relative z-10 rounded-full bg-gray-800/60 px-3 py-1.5 font-medium text-gray-300 hover:bg-gray-800"
-                >
-                  {post.category.title}
-                </a>
-              </div>
-              <div className="group relative grow">
-                <h3 className="mt-3 text-lg/6 font-semibold text-white group-hover:text-gray-300">
-                  <a href={post.href}>
-                    <span className="absolute inset-0" />
-                    {post.title}
-                  </a>
+
+        <div className="grid gap-6 md:grid-cols-3">
+          {USE_CASES.map((item) => (
+            <article
+              key={item.title}
+              className="flex flex-col justify-between rounded-3xl bg-white p-8"
+            >
+              <div>
+                <span className="inline-flex rounded-full bg-[#f5f5f7] px-3 py-1 text-sm font-medium text-black">
+                  {item.category}
+                </span>
+                <h3 className="mt-4 text-xl font-medium leading-snug tracking-tight text-black">
+                  {item.title}
                 </h3>
-                <p className="mt-5 line-clamp-3 text-sm/6 text-gray-400">{post.description}</p>
+                <p className="mt-3 text-sm leading-relaxed text-[#5a5b62]">
+                  {item.description}
+                </p>
               </div>
-              <div className="relative mt-8 flex items-center gap-x-4 justify-self-end">
-                <img alt="" src={post.author.imageUrl} className="size-10 rounded-full bg-gray-800" />
-                <div className="text-sm/6">
-                  <p className="font-semibold text-white">
-                    <a href={post.author.href}>
-                      <span className="absolute inset-0" />
-                      {post.author.name}
-                    </a>
-                  </p>
-                  <p className="text-gray-400">{post.author.role}</p>
+              <div className="mt-8 border-t border-black/5 pt-6">
+                <div className="bg-[linear-gradient(90deg,#ff6d3c,#ff6ba7_46%,#bb6dff)] bg-clip-text text-3xl font-bold text-transparent">
+                  {item.result}
                 </div>
+                <p className="mt-1 text-sm text-[#5a5b62]">{item.resultLabel}</p>
               </div>
             </article>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 }

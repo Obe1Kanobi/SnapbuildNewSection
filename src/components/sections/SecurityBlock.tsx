@@ -30,8 +30,6 @@ const SECURITY_POINTS = [
 export function SecurityBlock() {
   return (
     <section id="security" className="bg-[#f2f2f4] py-24">
-      <h1>SecurityBlock</h1>
-      <hr/>
       <div className="mx-auto w-full max-w-[1440px] px-4 md:px-10">
         {/* Заголовок-герой */}
         <div className="mb-12 flex flex-col items-center gap-3 text-center">

@@ -1,44 +1,63 @@
+const REVIEWS = [
+  {
+    quote:
+      'Раньше на сайт уходило три недели и целая команда. Теперь страница в фирменном стиле готова за несколько минут — без разработчиков.',
+    name: 'Анна Смирнова',
+    role: 'Руководитель маркетинга',
+    company: 'Крупный ритейл',
+  },
+  {
+    quote:
+      'Каждая генерация попадает в брендбук на 100%. Это сняло огромный пласт ручных проверок и ревью дизайнеров.',
+    name: 'Дмитрий Ковалёв',
+    role: 'Продукт-менеджер',
+    company: 'Финтех-сервис',
+  },
+  {
+    quote:
+      'Сайты, баннеры и презентации в едином стиле. Команда создаёт материалы сама, не дожидаясь дизайна.',
+    name: 'Елена Орлова',
+    role: 'CMO',
+    company: 'IT-компания',
+  },
+]
 
 /**
  * Reviews-секция (отзывы):
- * слайдер или сетка цитат с должностью и компанией.
- * После таблицы сравнения или безопасности.
+ * сетка карточек-цитат с именем, должностью и компанией.
+ * После секции безопасности. Светлый фон, белые карточки.
  */
 export default function ReviewsBlock() {
   return (
-    <section className="relative isolate overflow-hidden bg-gray-900 px-6 py-24 sm:py-32 lg:px-8">
-      <h1>ReviewsBlock</h1>
-      <hr/>
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,var(--color-indigo-500),transparent)] opacity-10" />
-      <div className="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-gray-900 shadow-xl ring-1 shadow-indigo-500/5 ring-white/5 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center" />
-      <div className="mx-auto max-w-2xl lg:max-w-4xl">
-        <img
-          alt=""
-          src="https://tailwindcss.com/plus-assets/img/logos/workcation-logo-indigo-400.svg"
-          className="mx-auto h-12"
-        />
-        <figure className="mt-10">
-          <blockquote className="text-center text-xl/8 font-semibold text-white sm:text-2xl/9">
-            <p>
-              “Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias
-              molestiae. Numquam corrupti in laborum sed rerum et corporis.”
-            </p>
-          </blockquote>
-          <figcaption className="mt-10">
-            <img
-              alt=""
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-              className="mx-auto size-10 rounded-full"
-            />
-            <div className="mt-4 flex items-center justify-center space-x-3 text-base">
-              <div className="font-semibold text-white">Judith Black</div>
-              <svg width={3} height={3} viewBox="0 0 2 2" aria-hidden="true" className="fill-white">
-                <circle r={1} cx={1} cy={1} />
-              </svg>
-              <div className="text-gray-400">CEO of Workcation</div>
-            </div>
-          </figcaption>
-        </figure>
+    <section id="reviews" className="bg-white py-24">
+      <div className="mx-auto w-full max-w-[1440px] px-4 md:px-10">
+        <div className="mb-12 max-w-2xl">
+          <span className="text-sm font-medium text-brand-500">Отзывы</span>
+          <h2 className="mt-3 text-4xl font-semibold leading-tight tracking-tight text-black md:text-5xl">
+            Команды, для которых бренд — закон
+          </h2>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-3">
+          {REVIEWS.map((review) => (
+            <figure
+              key={review.name}
+              className="flex flex-col justify-between rounded-3xl border border-black/5 bg-[#f2f2f4] p-8"
+            >
+              <blockquote>
+                <p className="text-base leading-relaxed text-black">
+                  «{review.quote}»
+                </p>
+              </blockquote>
+              <figcaption className="mt-8 flex flex-col gap-1 border-t border-black/5 pt-6">
+                <span className="font-semibold text-black">{review.name}</span>
+                <span className="text-sm text-[#5a5b62]">
+                  {review.role} · {review.company}
+                </span>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
       </div>
     </section>
   )
