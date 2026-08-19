@@ -1,5 +1,9 @@
 import { Header } from './components/sections/Header'
 import { Hero } from './components/sections/Hero'
+import { Product } from './components/sections/Product'
+import { Features } from './components/sections/Features'
+import { Security } from './components/sections/Security'
+import { FAQ } from './components/sections/FAQ'
 import { Footer } from './components/sections/Footer'
 
 function App() {
@@ -8,9 +12,12 @@ function App() {
       <Header />
       <main>
         <Hero />
-        {/* Здесь будут остальные секции сайта Снэпбилд
-            (логотипы, продуктовые карточки, вкладки, сравнение,
-            безопасность, роадмап, FAQ, CTA) + 5 новых секций */}
+        <Product />
+        <Features />
+        <Security />
+        <FAQ />
+        {/* Здесь будут следующие секции:
+            таблица сравнения, роадмап, CTA + 5 новых секций */}
       </main>
       <Footer />
     </>
