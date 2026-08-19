@@ -3,10 +3,16 @@ const stats = [
   { id: 2, name: 'Assets under holding', value: '$119 trillion' },
   { id: 3, name: 'New users annually', value: '46,000' },
 ]
-
+/**
+ * Metrics-секция (секция метрик):
+ * «5 минут вместо 3 недель», количество генераций и т.п.
+ * Компактная секция после hero или сравнения.
+ */
 export default function MetricsBlock() {
   return (
     <div className="bg-gray-900 py-24 sm:py-32">
+      <h1>MetricsBlock</h1>
+      <hr/>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
           {stats.map((stat) => (

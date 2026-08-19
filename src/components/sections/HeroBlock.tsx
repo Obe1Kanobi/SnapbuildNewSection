@@ -12,6 +12,8 @@ export function HeroBlock() {
       id="hero"
       className="relative flex flex-col items-center overflow-hidden px-4 pt-32 md:px-10 md:pt-36 lg:pt-40"
     >
+      <h1>HeroBlock</h1>
+      <hr/>
       <div className="flex w-full max-w-[1440px] flex-col items-center">
         {/* Интро-блок */}
         <div className="flex max-w-[984px] flex-col items-center gap-4">

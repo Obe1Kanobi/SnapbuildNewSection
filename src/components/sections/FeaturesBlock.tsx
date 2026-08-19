@@ -142,6 +142,8 @@ export function FeaturesBlock() {
 
   return (
     <section id="features" className="bg-[#f2f2f4] py-24">
+      <h1>FeaturesBlock</h1>
+      <hr/>
       <div className="mx-auto w-full max-w-[1440px] px-4 md:px-10">
         {/* Заголовок + табы */}
         <div className="mb-12 flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">

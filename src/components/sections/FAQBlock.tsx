@@ -53,6 +53,8 @@ export function FAQBlock() {
 
   return (
     <section id="faq" className="bg-black py-24">
+      <h1>FAQBlock</h1>
+      <hr/>
       <div className="mx-auto w-full max-w-[1440px] px-4 md:px-10">
         <div className="mb-14 flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
           <h2 className="max-w-xl text-4xl font-medium leading-tight tracking-tight text-white md:text-5xl">

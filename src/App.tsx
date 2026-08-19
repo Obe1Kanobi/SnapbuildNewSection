@@ -5,7 +5,7 @@ import { FeaturesBlock } from './components/sections/FeaturesBlock'
 import { SecurityBlock } from './components/sections/SecurityBlock'
 import { FAQBlock } from './components/sections/FAQBlock'
 import { FooterBlock } from './components/sections/FooterBlock'
-import PricingPlansBlock from './components/sections/PricingPlans'
+import PricingPlansBlock from './components/sections/PricingPlansBlock'
 import FeedbackFormBlock from './components/sections/FeedbackFormBlock'
 import ReviewsBlock from './components/sections/ReviewsBlock'
 import MetricsBlock from './components/sections/MetricsBlock'
@@ -17,18 +17,13 @@ function App() {
       <HeaderBlock />
       <main>
         <HeroBlock />
+        <MetricsBlock />
         <ProductBlock />
-
         <FeaturesBlock />
         <UseCasesBlock  />
-
-        
         <SecurityBlock />
         <ReviewsBlock />
-
-        <MetricsBlock />
         <FeedbackFormBlock />
-        
         <PricingPlansBlock />
         <FAQBlock />
         

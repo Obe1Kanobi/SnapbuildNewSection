@@ -1,9 +1,16 @@
 // import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
 // import { ChevronDownIcon } from '@heroicons/react/16/solid'
 
+/**
+ * FeedbackForm-секция (Форма обратной связи):
+ * RHF, валидация (имя, email, компания), понятные ошибки,
+ * success-состояние вместо формы после отправки. Перед финальным CTA.
+ */
 export default function FeedbackFormBlock() {
   return (
     <form>
+      <h1>FeedbackFormBlock</h1>
+      <hr/>
       <div className="space-y-12">
         <div className="border-b border-white/10 pb-12">
           <h2 className="text-base/7 font-semibold text-white">Форма обратной связи</h2>

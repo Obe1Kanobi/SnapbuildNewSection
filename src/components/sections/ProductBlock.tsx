@@ -34,6 +34,8 @@ const PRODUCT_CARDS = [
 export function ProductBlock() {
   return (
     <section id="product" className="bg-[#f2f2f4] py-6">
+      <h1>ProductBlock</h1>
+      <hr/>
         <LogoBlock />
         <div className="mx-auto w-full max-w-[1440px] px-4 md:px-10">
             {/* Заголовок секции */}
