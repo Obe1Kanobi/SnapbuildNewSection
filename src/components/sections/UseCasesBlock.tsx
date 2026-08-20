@@ -35,7 +35,6 @@ export default function UseCasesBlock() {
     <section id="use-cases" className="bg-[#f2f2f4] py-24">
       <div className="mx-auto w-full max-w-[1440px] px-4 md:px-10">
         <div className="mb-12 max-w-2xl">
-          <span className="text-sm font-medium text-brand-500">Кейсы</span>
           <h2 className="mt-3 text-4xl font-semibold leading-tight tracking-tight text-black md:text-5xl">
             Кейсы использования
           </h2>

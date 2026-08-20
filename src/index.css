@@ -122,6 +122,10 @@
    Базовые стили дизайн-системы
    ============================================================ */
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background font-sans text-neutral-500 antialiased;
   }
@@ -133,5 +137,14 @@
   h5,
   h6 {
     @apply text-neutral-800;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(90deg, #ff6d3c, #ff6ba7 46%, #bb6dff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }

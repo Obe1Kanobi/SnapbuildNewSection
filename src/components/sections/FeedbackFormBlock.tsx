@@ -108,7 +108,6 @@ export default function FeedbackFormBlock() {
         <div className="grid gap-12 lg:grid-cols-2">
           {/* Текст слева */}
           <div className="max-w-md">
-            <span className="text-sm font-medium text-brand-500">Контакты</span>
             <h2 className="mt-3 text-4xl font-semibold leading-tight tracking-tight text-black md:text-5xl">
               Обсудим ваш проект
             </h2>

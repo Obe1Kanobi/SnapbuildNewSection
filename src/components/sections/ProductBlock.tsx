@@ -5,21 +5,18 @@ import { LogoBlock } from './LogoBlock'
 
 const PRODUCT_CARDS = [
   {
-    eyebrow: 'Дизайн-система',
     title: 'Дизайн-система — ядро платформы',
     description:
       'Ваши компоненты, цвета и шрифты — единственный источник стиля. Каждая генерация строится строго по правилам вашего бренда.',
     image: onePlatform,
   },
   {
-    eyebrow: 'Гибкая конфигурация',
     title: 'Гибкая конфигурация',
     description:
       'Правила бренда задаются один раз — работают в каждой генерации. Настройте один раз и используйте во всех форматах.',
     image: processFlexible,
   },
   {
-    eyebrow: 'Соответствие по умолчанию',
     title: 'Соответствие по умолчанию',
     description:
       'AI не может нарушить бренд: сайты, изображения, видео, баннеры и презентации — строго по вашим правилам.',
@@ -61,9 +58,6 @@ export function ProductBlock() {
                     />
                   </div>
                   <div className="flex flex-col gap-2 p-8">
-                    <span className="text-sm font-medium text-brand-500">
-                      {card.eyebrow}
-                    </span>
                     <h3 className="text-2xl font-medium leading-snug tracking-tight text-black">
                       {card.title}
                     </h3>

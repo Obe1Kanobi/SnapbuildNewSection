@@ -64,7 +64,6 @@ export default function PricingPlansBlock() {
     <section id="pricing" className="bg-white py-24">
       <div className="mx-auto w-full max-w-[1440px] px-4 md:px-10">
         <div className="mb-12 text-center">
-          <span className="text-sm font-medium text-brand-500">Тарифы</span>
           <h2 className="mx-auto mt-3 max-w-2xl text-4xl font-semibold leading-tight tracking-tight text-black md:text-5xl">
             Выберите подходящий план
           </h2>

@@ -23,8 +23,8 @@ export function HeaderBlock() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 border-b border-black/5 bg-white/85 text-neutral-900 backdrop-blur-md">
-      <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-4 py-4 md:px-10">
+    <header className="sticky top-6 z-50 mx-auto mt-6 w-full max-w-[1440px] rounded-2xl bg-white/85 text-neutral-900 backdrop-blur-md shadow-lg">
+      <div className="flex items-center justify-between px-4 py-4 md:px-10">
         {/* Логотип */}
         <a href="#" className="inline-flex shrink-0">
           <img
@@ -35,7 +35,7 @@ export function HeaderBlock() {
         </a>
 
         {/* Навигация (desktop) */}
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-6 lg:flex">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
@@ -49,16 +49,8 @@ export function HeaderBlock() {
 
         {/* Кнопки (desktop) */}
         <div className="hidden items-center gap-3 lg:flex">
-          <Button href="https://builder.snapbuild.ru/" variant="gradient" size="sm">
+          <Button href="https://builder.snapbuild.ru/" variant="dark" size="sm">
             Начать сейчас
-          </Button>
-          <Button
-            href="https://builder.snapbuild.ru/"
-            variant="glass"
-            size="sm"
-            className="hidden xl:inline-flex"
-          >
-            Демо
           </Button>
         </div>
 
@@ -106,7 +98,7 @@ export function HeaderBlock() {
             <div className="mt-2 flex flex-col gap-2 border-t border-stroke-tertiary pt-3">
               <Button
                 href="https://builder.snapbuild.ru/"
-                variant="glass"
+                variant="dark"
                 className="w-full"
               >
                 Начать сейчас

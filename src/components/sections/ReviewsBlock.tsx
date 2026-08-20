@@ -32,9 +32,8 @@ export default function ReviewsBlock() {
     <section id="reviews" className="bg-white py-24">
       <div className="mx-auto w-full max-w-[1440px] px-4 md:px-10">
         <div className="mb-12 max-w-2xl">
-          <span className="text-sm font-medium text-brand-500">Отзывы</span>
           <h2 className="mt-3 text-4xl font-semibold leading-tight tracking-tight text-black md:text-5xl">
-            Команды, для которых бренд — закон
+            Отзывы любимых клиентов
           </h2>
         </div>
 
